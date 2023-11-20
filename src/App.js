@@ -1,10 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Input from "./Components/Input";
 import Display from "./Components/Display"
 
 
 function App() {
   const [user,setUser] = useState(null)
+
+  // will run once auto when the function loads if 2nd array is empty."dependency array"
+  // tricky with async await.. make function inside for async and call after the main effect syntax
+  // if stateful variable in the dependency array, will run every time the variable changes..can be multiple variables
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //   const userName="Csolly89"
+  //   const url = encodeURI (`https://api.github.com/users/${userName}`)
+  //   const response = await fetch(url)
+  //   const data = await response.json()
+  //   setUser(data)
+  //   }
+  //   fetchData()
+  // }, [ ])
+
 
   const display = user && <Display user={user} />
 
