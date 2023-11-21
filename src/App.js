@@ -17,6 +17,10 @@ function App() {
   //   const response = await fetch(url)
   //   const data = await response.json()
   //   setUser(data)
+
+  // return() => {
+    // clearInterval(variable)  cleanup function inside of useEffect to cancel 
+  // }
   //   }
   //   fetchData()
   // }, [ ])
